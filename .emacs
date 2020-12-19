@@ -37,17 +37,9 @@
  ;; If there is more than one, they won't work right.
 ;;)
 
-;; Go mode
-(setq load-path (cons "/usr/local/go/misc/emacs" load-path))
-(require 'go-mode-load)
-
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 ;; smooth scrolling
 ;; this is for mouse wheel
 (setq mouse-wheel-scroll-amount '(1 ((shift) .1))) ;; one line at a time
 (setq mouse-wheel-progressive-speed nil) ;; dont accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-
-;; CMake mode
-(setq load-path (cons (expand-file-name "/usr/local/share/cmake-3.16/editors/emacs") load-path))
-(require 'cmake-mode)
